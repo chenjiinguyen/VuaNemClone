@@ -46,29 +46,6 @@ body {
     padding-left: 24px;
     }
 
-
-.header-top-left {
-    color: #ff2c2c;
-}
-
-    .header-top-left p {
-        position: relative;
-        height: 18px;
-        margin-bottom: 0;
-    }
-
-
-.header-top-left a {
-    color: #ff2c2c;
-    padding-left: 20px;
-    text-decoration: none;
-}
-
-    .header-top-left img {
-        position: absolute;
-        left: .5px;
-    }
-
 .header-top-right {
     margin-right: 80px;
     vertical-align: middle;
@@ -211,7 +188,8 @@ h3 {
 
 #footer {
 
-    margin-top: 400px;
+    margin-top: 100px;
+    border-top: 2px solid #eaeae1;
     display: flex;
     justify-content: space-around;
 }
