@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Vua Nệm Hệ Thống Bán Lẻ</title>
-    <link href="style.css" rel="stylesheet" />
+     <link href="css/CSS_MasterPage.css" rel="stylesheet" />
     <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-    <link href="registration.css" rel="stylesheet" />
+<link href="css/registration.css" rel="stylesheet" />
 </head>
 <body>
     <div>
@@ -222,7 +222,7 @@
             </div>
            
         </div>
-        <div id="content" style="margin-top: 150px; background-color: #f0f2f4; height: 500px">
+        <div id="Content1" style="margin-top: 150px; background-color: #f0f2f4; height: auto">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
