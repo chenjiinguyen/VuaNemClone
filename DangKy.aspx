@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DangKy.aspx.cs" Inherits="DangKy" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <link href="CSS_Styles/registration.css" rel="stylesheet" />
      <form id="form1" runat="server">
         <asp:MultiView ID="MViewTrangDangKy" runat="server">
             <asp:View ID="ViewDangKy" runat="server">
                 <div class="cont-table" >
-                        <h2 style="padding-top: 10px; text-align: center; font-weight: bolder; color: #20315C;">ĐĂNG KÝ THÀNH VIÊN</h2>
+                        <h2 style="padding-top: 20px; text-align: center; font-weight: bolder; color: #20315C; font-size: 26px">ĐĂNG KÝ THÀNH VIÊN</h2>
                         <table>
                             <tr>
                                 <td text-align: right" style="width: 176px; text-align: right;">Họ và tên đệm <span>(*)&nbsp;&nbsp; </span> </td>
@@ -112,11 +113,10 @@
                             </tr>
                             <tr>
                                <td style="text-align: right; width: 176px;"></td>
-                                <td style="width: 221px">
-                                     <asp:Button ID="btnGui" runat="server" style="outline:none" Text="GỬI" BackColor="#FF6600" BorderColor="#FF6600" ForeColor="White" Width="57px" Height="33px" />
-                                     <asp:Button ID="btnNhapLai" runat="server" style="outline:none; margin-left: 60px" Text="NHẬP LẠI" BorderColor="#FF6600" BackColor="#FF6600" ForeColor="White" Height="36px" Width="83px" />
+                                <td colspan="2">
+                                     <asp:Button ID="btnGui" runat="server" style="outline:none" Text="GỬI" BackColor="#2490D4" BorderColor="#2490D4" ForeColor="White" Width="80px" Height="33px" />
+                                     <asp:Button ID="btnNhapLai" runat="server" style="outline:none; margin-left: 60px" Text="NHẬP LẠI" BorderColor="#2490D4" BackColor="#2490D4" ForeColor="White" Height="36px" Width="81px" />
                                 </td>
-                                <td>&nbsp;</td>
                             </tr>
 
                         </table>
@@ -124,7 +124,7 @@
             </asp:View>
             <asp:View ID="ViewThongTin" runat="server">
                 <div class="cont-table">
-                        <h2 style="padding-top: 10px; text-align: center; font-weight: bolder; color: #20315C;">THÔNG TIN THÀNH VIÊN</h2>
+                        <h2 style="padding-top: 10px; text-align: center; font-weight: bolder; color: #20315C; font-size: 26px">THÔNG TIN THÀNH VIÊN</h2>
                         <table>
                             <tr>
                                 <td style="width: 176px; text-align: right">Họ và tên đệm: <span>&nbsp; </span></td>

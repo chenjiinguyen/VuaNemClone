@@ -1,0 +1,40 @@
+﻿#email, #psw {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: #ccc;
+}
+
+
+.signin {
+    width: 600px;
+    height: 350px;
+    margin-left: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    margin-left: 350px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-radius: 14px;
+}
+
+.submitbtn {
+    margin-top: 10px;
+    color: white;
+    background-color: #2490d4;
+    border: 1px solid #2490d4;
+    line-height: 40px;
+    height: 40px;
+    width: 100px;
+    margin-left: 240px;
+    outline-color: blue;
+}
+
+label {
+    color: #20315C;
+}

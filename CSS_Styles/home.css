@@ -1,0 +1,42 @@
+﻿
+.cap1 li a {
+    color: #20315c;
+    opacity: .65;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.cap1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+    .cap1 li.active {
+        color: #292bb7;
+        opacity: 1;
+       
+    }
+
+    .cap1 .list-item{
+        display: flex;
+        position: absolute;
+        display: none;
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+
+    .cap1 a:hover {
+        color: blue;
+    }
+
+.hover-li:hover .list-item {
+    display: block;
+}
+
+.list-item img {
+    padding-right: 10px;
+}

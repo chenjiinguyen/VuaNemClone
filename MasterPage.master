@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Vua Nệm Hệ Thống Bán Lẻ</title>
-    <link href="style.css" rel="stylesheet" />
+    <link href="CSS_Styles/masterpage.css" rel="stylesheet" />
     <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-    <link href="registration.css" rel="stylesheet" />
+    
 </head>
 <body>
     <div>
@@ -45,7 +45,7 @@
                                         <a>
                                             <img src="Hinhanh/menu_icon_nem.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Nệm</p>
-                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 60px">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">120 x190cm</a></li>
@@ -89,7 +89,7 @@
                                         <a>
                                             <img src="Hinhanh/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Chăn Ga Gối</p>
-                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 60px">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">120 x200cm</a></li>
@@ -127,7 +127,7 @@
                                         <a>
                                             <img src="Hinhanh/menu_icon_phukien.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Phụ kiện</p>
-                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 60px">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">45 x 65cm</a></li>
@@ -166,7 +166,7 @@
                                         <a>
                                             <img src="Hinhanh/menu_icon_giuong.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Giường</p>
-                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 80px">
+                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 100px">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">180 x 200cm</a></li>
@@ -222,11 +222,11 @@
             </div>
            
         </div>
-        <div id="content" style="margin-top: 150px; background-color: #f0f2f4; height: 500px">
+        <div id="content" style="margin-top: 50px; background-color: #f0f2f4; height: 540px">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <div id="footer">
+        <div id="footer" style="margin-top: 50px;">
             <div class="bottom-footer-item report">
                 <div class="img">
                     <a>

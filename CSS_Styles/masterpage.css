@@ -81,7 +81,6 @@ ul li {
 
 .container {
     border-bottom: 2px solid #eaeae1;
-    position:fixed;
     width: 100%;
 }
 
@@ -182,13 +181,13 @@ h3 {
 
 .item:hover .submenu {
     display: block;
-    position:fixed;
+ 
 }
 
 
 #footer {
 
-    margin-top: 100px;
+    
     border-top: 2px solid #eaeae1;
     display: flex;
     justify-content: space-around;
