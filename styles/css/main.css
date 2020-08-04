@@ -73,7 +73,8 @@ ul li{
 .header-center {
     width: 100%;
     background: #fbfbfb;
-    border-bottom: 2px solid #eaeae1;
+    border-bottom: 1px solid #c8c9e8;
+    z-index:100;
 }
 
 .sticky-header {
@@ -207,11 +208,10 @@ h3 {
 
 
 #footer {
-    width: 100%;
     margin-top: 100px;
     border-top: 2px solid #eaeae1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .bottom-footer-item {
@@ -270,7 +270,6 @@ h3 {
 .copyright p{
     display: inline-block;
     padding-bottom: 40px;
-    margin-left: 25em;
     color: #606060;
     font-size: 16px;
 }
@@ -587,4 +586,127 @@ increment-next {  from {
  -webkit-transform: translateY(50px);
  transform: translateY(50px);
 }
+}
+
+
+/** LIST SAN PHAM **/
+.arrange-fill {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    position: relative;
+    width: 33.33%;
+    min-height: 1px;
+    margin-bottom: 25px;
+    padding: 0 10px 20px;
+    max-height: 380px;
+}
+.arrange-fill .item-product {
+    padding-bottom: 110px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.arrange-fill .list-image-wrapper {
+    position: relative;
+}
+
+.arrange-fill img {
+    width: 100%;
+}
+
+.arrange-fill .tile-content {
+    font-size: 16px;
+    text-align: left;
+}
+
+.arrange-fill .product-title {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: 0 0;
+    display: -webkit-box;
+    font-size: 16px;
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 45px;
+    margin: 0;
+}
+
+.productprice.listview {
+    height: 52px;
+}
+
+.arrange-fill .productprice .price-box .old-price {
+    display: inline-block;
+    margin: 5px 10px 0 0;
+}
+
+.arrange-fill .productprice .price-box .old-price .price-wrapper {
+    color: #242424;
+}
+
+.arrange-fill .product-description {
+    display: none;
+    font-size: 14px!important;
+    color: #6d6e71!important;
+    padding: 0;
+}
+
+.arrange-fill .productprice .price-box .normal-price .price {
+    font-size: 20px;
+    color: #ff3c3b;
+    font-weight: 600;
+}
+
+.arrange-fill .view-detail {
+    margin-top: 10px;
+    text-align: center;
+    border: none;
+    height: 33px;
+    line-height: 33px;
+}
+
+.arrange-fill .view-detail a {
+    color: #fff;
+    display: none;
+    border-radius: 4px;
+    background-color: #fe2c2b;
+    transition: all .35s;
+    -o-transition: all .35s;
+    -moz-transition: all .35s;
+    -webkit-transition: all .35s;
+}
+
+.arrange-fill:hover {
+    -webkit-box-shadow: 0 3px 17px rgba(0,0,0,.16);
+    box-shadow: 0 3px 17px rgba(0,0,0,.16);
+    background-color: #fff;
+}
+
+.arrange-fill:hover .view-detail a{
+    display:block;
+}
+
+.arrange-fill:hover .item-product .tile-content {
+    bottom: 0;
+}
+
+
+.arrange-fill .item-product .tile-content {
+    transition: all .15s;
+    -webkit-transition: all .15s;
+    -moz-transition: all .15s;
+    z-index: 2;
+    -o-transition: all .15s;
+    padding: 15px 0 0;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    bottom: -40px;
 }

@@ -4,7 +4,7 @@
   function ctrls() {
     var _this = this;
 
-    this.counter = 0;
+
     this.els = {
       decrement: document.querySelector('.ctrl__button--decrement'),
       counter: {
@@ -14,6 +14,9 @@
       },
       increment: document.querySelector('.ctrl__button--increment')
     };
+
+    this.counter = this.els.counter.input.getAttribute("value");
+
 
     this.decrement = function() {
       var counter = _this.getCounter();
@@ -54,7 +57,13 @@
       }, 200);
     };
 
-    this.ready = function() {
+    this.ready = function () {
+        window.addEventListener('load', function () {
+            _this.setCounter(_this.counter);
+            console.log(_this.counter);
+            _this.render();
+        });
+
       _this.els.decrement.addEventListener('click', function() {
         _this.debounce(function() {
           _this.decrement();
@@ -66,6 +75,7 @@
         _this.debounce(function() {
           _this.increment();
           _this.render('is-increment-hide', 'is-increment-visible');
+          console.log(_this.counter);
         });
       });
 
@@ -88,8 +98,10 @@
     };
   };
 
-  // init
+
+  'use strict';
+
+  
   var controls = new ctrls();
   document.addEventListener('DOMContentLoaded', controls.ready);
 })();
-

@@ -9,6 +9,7 @@
     <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <%--<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />--%>
     <link href="styles/css/fonts.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div>
@@ -19,7 +20,7 @@
                         <div class="header-top-right">
                             <div id="giohang">
                                 <img src="styles/images/giohang.png" />&nbsp;
-                                <a class="hover-info" href="#">Giỏ Hàng</a>
+                                <a class="hover-info" href="giohang.aspx">Giỏ Hàng</a>
                                 <span>(<asp:Label ID="lbSoLuongDonHang" runat="server" Text="Label"></asp:Label>)</span>
                             </div>
                             <div class="dangnhap">
@@ -87,9 +88,10 @@
 
                                     </li>
                                     <li class="item level-top">
-                                        <a>
+                                        <a href="changagoi.aspx">
                                             <img src="styles/images/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Chăn Ga Gối</p>
+                                        </a>
                                             <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
@@ -122,7 +124,7 @@
                                                     <li><a href="#">Pyeoda</a></li>
                                                 </ul>
                                             </div>
-                                        </a>
+                                        
                                     </li>
                                     <li class="item level-top">
                                         <a>
@@ -227,7 +229,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <div id="footer">
+        <div id="footer" class="container">
             <div class="bottom-footer-item report">
                 <div class="img">
                     <a>
@@ -289,11 +291,11 @@
             </div>
         </div>
 
-        <div class="copyright">
+        <div class="copyright container">
             <p>Mã số doanh nghiệp 0107968516 do Sở Kế hoạch Đầu tư Hà Nội cấp lần 1 ngày 18/8/2017</p>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    
     <script>
         var fixmeTop = $('.header-center').offset().top;
         $(window).scroll(function () {

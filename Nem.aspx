@@ -5,7 +5,7 @@
             <div class="container">
                  <div class="sitemap">
                     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-                     <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathDirection="CurrentToRoot">
+                     <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathDirection="RootToCurrent">
                      </asp:SiteMapPath>
                 </div>
                 <div class="list-content">
@@ -18,7 +18,7 @@
                                       
                     </div>
              
-                    <div class="center-content" style="float:right; height: auto; width:75%; background-color: #FFFFFF;">
+                    <div class="center-content" style="float:right; height: auto; width:75%; background-color: #FFFFFF;margin-bottom: 50px;">
                         <asp:DataList ID="dataLoai" runat="server" Width="100%" RepeatColumns="1" RepeatDirection="Horizontal" RepeatLayout="Table" >
                             <ItemTemplate>
                                 <table style="border-top: 1px solid #44574D; padding: 25px; width:100%; border-left-color: #44574D; border-left-width: 1px; border-right-color: #44574D; border-right-width: 1px; border-bottom-color: #44574D; border-bottom-width: 1px;">

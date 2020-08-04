@@ -9,7 +9,7 @@
                      </asp:SiteMapPath>
                 </div>
                 <div class="list-content">
-                    <div class="center-content" style="float:right; height: auto; width:100%; background-color: #FFFFFF;">
+                    <div class="center-content" style="float:right; height: auto; width:100%; background-color: #FFFFFF;margin-bottom: 50px;">
                        
                         <asp:DataList ID="dataSanPham" runat="server" Width="100%">
                             <ItemTemplate>

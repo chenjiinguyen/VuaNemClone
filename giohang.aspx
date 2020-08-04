@@ -12,7 +12,7 @@
                     <div class="left" style="height: auto; width: 60%; text-align: left; float:left; background-color: #FFFFFF;">     
                     </div>
              
-                    <div class="center-content" style="float:right; height: auto; width:40%; background-color: #FFFFFF;">
+                    <div class="center-content" style="float:right; height: auto; width:40%; background-color: #FFFFFF;margin-bottom: 50px;">
                         <asp:DataList ID="dataCart" runat="server" Width="100%" RepeatColumns="1" RepeatDirection="Horizontal" RepeatLayout="Table" >
                             <ItemTemplate>
                                 <table style="width:100%;padding: 15px 5px;">
@@ -39,17 +39,32 @@
                                             <span>Số lượng</span>
                                         </td>
                                         <td style="vertical-align: center; padding-right: 10px">
-                                            <span>Số lượng</span>
+                                            <div class='c_ctrl'>
+                                                <div class='c_ctrl__button c_ctrl__button--decrement'>&ndash;</div>
+                                                <div class='c_ctrl__counter'>
+                                                    <asp:TextBox ID="txtSoLuong" runat="server" CssClass="c_ctrl__counter-input" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);" Text='<%# Eval("SOLUONG") %>'></asp:TextBox>
+                                                    <div class='c_ctrl__counter-num'>1</div>
+                                                </div>
+                                                <div class='c_ctrl__button c_ctrl__button--increment'>+</div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>
                             </ItemTemplate>
 
                         </asp:DataList>
+                        <div style="width:100%;display:flex;justify-content:space-between">
+                            <div>
+                                <span style="font-size: 16px; font-weight: 400; color: #20315c">Thành tiền</span>
+                            </div>
+                            <div>
+                                <asp:Label ID="lbTongTien" runat="server" Font-Bold="True" Font-Size="16px" ForeColor="#FF2C2C"></asp:Label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-                
+     <script src="styles/js/inputnumber_c.js"></script>           
     </form>
 </asp:Content>
 
