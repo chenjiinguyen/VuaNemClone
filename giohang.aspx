@@ -38,8 +38,9 @@
                                         <td style="vertical-align: center; padding-left: 10px">
                                             <span>Số lượng</span>
                                         </td>
-                                        <td style="vertical-align: center; padding-right: 10px">
-                                            <div class='c_ctrl'>
+                                        <td >
+                                          <div style="display: flex;justify-content: flex-end;align-items: flex-end;">
+                                               <div class='c_ctrl'>
                                                 <div class='c_ctrl__button c_ctrl__button--decrement'>&ndash;</div>
                                                 <div class='c_ctrl__counter'>
                                                     <asp:TextBox ID="txtSoLuong" runat="server" CssClass="c_ctrl__counter-input" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);" Text='<%# Eval("SOLUONG") %>'></asp:TextBox>
@@ -47,15 +48,16 @@
                                                 </div>
                                                 <div class='c_ctrl__button c_ctrl__button--increment'>+</div>
                                             </div>
+                                          </div>
                                         </td>
                                     </tr>
                                 </table>
                             </ItemTemplate>
 
                         </asp:DataList>
-                        <div style="width:100%;display:flex;justify-content:space-between">
+                        <div style="width:100%;display:flex;justify-content:space-between; margin-top: 50px;">
                             <div>
-                                <span style="font-size: 16px; font-weight: 400; color: #20315c">Thành tiền</span>
+                                <asp:Label ID="lbThanhTien" runat="server"  Font-Size="16px" ForeColor="#20315c"></asp:Label>
                             </div>
                             <div>
                                 <asp:Label ID="lbTongTien" runat="server" Font-Bold="True" Font-Size="16px" ForeColor="#FF2C2C"></asp:Label>

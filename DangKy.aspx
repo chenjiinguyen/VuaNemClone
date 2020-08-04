@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DangKy.aspx.cs" Inherits="DangKy" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <link href="CSS_Styles/registration.css" rel="stylesheet" />
+    <link href="styles/css/registration.css" rel="stylesheet" />
      <form id="form1" runat="server">
         <asp:MultiView ID="MViewTrangDangKy" runat="server">
             <asp:View ID="ViewDangKy" runat="server">

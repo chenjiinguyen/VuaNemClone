@@ -10,11 +10,16 @@ public partial class giohang : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        DataTable cart = RemakeDataTable((DataTable)Session["cart"]);
+        if (Session["cart"] != null)
+        {
+            DataTable cart = RemakeDataTable((DataTable)Session["cart"]);
 
-        dataCart.DataSource = cart;
-        dataCart.DataBind();
-        lbTongTien.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", tinhTongTien(cart));
+            dataCart.DataSource = cart;
+            dataCart.DataBind();
+            lbThanhTien.Text = "Thành Tiền";
+            lbTongTien.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", tinhTongTien(cart));
+        }
+
     }
 
     private DataTable RemakeDataTable(DataTable arr)

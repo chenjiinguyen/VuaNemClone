@@ -15,7 +15,8 @@
     <div>
         <div>
             <div id="header">
-                <div id="title">
+                <div class="container">
+                    <div id="title">
                     <div id="banner-km">
                         <div class="header-top-right">
                             <div id="giohang">
@@ -25,22 +26,24 @@
                             </div>
                             <div class="dangnhap">
                                 <img src="styles/images/dangnhap.png" />
-                                <a class="hover-info" href="#">Đăng Nhập/</a>
-                                <a class="hover-info" href="#">Đăng Ký</a>
+                                <a class="hover-info" href="dangnhap.aspx">Đăng Nhập/</a>
+                                <a class="hover-info" href="dangky.aspx">Đăng Ký</a>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
 
             <div class="header-center">
                 <div class="container">
                     <div class="content-header">
-                        <div class="logo-header desktop">
+                        <div class="navbar">
+                            <div class="logo-header desktop">
                             <a href="trangchu.aspx">
                                 <img src="styles/images/logomenu_vuanem.gif" /></a>
                         </div>
-                        <div class="main-menu desktop">
+                            <div class="main-menu desktop">
                             <div class="horizontal-menu">
                                 <ul class="group-menu">
                                     <li class="item level-top">
@@ -48,7 +51,7 @@
                                             <img src="styles/images/menu_icon_nem.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Nệm</p>
                                         </a>
-                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                            <div class="submenu" >
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">120 x190cm</a></li>
@@ -92,7 +95,7 @@
                                             <img src="styles/images/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Chăn Ga Gối</p>
                                         </a>
-                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                            <div class="submenu" >
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">120 x200cm</a></li>
@@ -130,7 +133,7 @@
                                         <a>
                                             <img src="styles/images/menu_icon_phukien.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Phụ kiện</p>
-                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                            <div class="submenu">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">45 x 65cm</a></li>
@@ -169,7 +172,7 @@
                                         <a>
                                             <img src="styles/images/menu_icon_giuong.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Giường</p>
-                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 100px">
+                                            <div class="submenu" >
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">180 x 200cm</a></li>
@@ -207,16 +210,25 @@
                                 </ul>
                             </div>
                         </div>
+                        </div>
                      
                         <div class="search-bar">
-                            <form>
-                                <input id="search" type="text" name="search" placeholder="Tìm kiếm..." onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Tìm kiếm...'" />
+                            <form class="search-bar-form">
+                                <div class="field search">
+                                    <div class="control">
+                                        <input id="search" class="input-text" type="text" name="search" placeholder="Tìm kiếm..." onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Tìm kiếm...'" />
+                                    </div>
+                                    <div class="action">
+                                        <button class="search" type="submit" title="Tìm kiếm">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
 
+                                
                             </form>
-                            <button class="action" type="submit" title="Tìm kiếm">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
+
                         </div>
                         
                     </div>

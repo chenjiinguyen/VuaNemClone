@@ -90,7 +90,7 @@
             
              $(document).ready(function () {
                  $('.arrange-fill').unwrap();
-                 $('#ContentPlaceHolder1_dataLoai').css({ "display": "flex", "flex-flow": "wrap" });
+                 $('#ContentPlaceHolder1_dataLoai').css({ "display": "flex", "flex-flow": "wrap" ,"align-items":"center","justify-content":"center"});
              });
          </script>                  
     </form>
