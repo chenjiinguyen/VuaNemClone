@@ -1,0 +1,21 @@
+﻿* {
+}
+ul li {
+    list-style-type: none;
+    padding-right: 40px;
+    text-align: center;
+    color: #20315C;
+}
+.cap1 {
+    /*font-family: 'Open Sans', sans-serif;*/
+    padding-right:20px;
+    position:relative;
+}
+.cap1 > li {
+    float:left;
+    position:absolute;
+    display: none;
+}
+.cap1 :hover li{
+    display:block;
+    }

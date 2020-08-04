@@ -5,10 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Vua Nệm Hệ Thống Bán Lẻ</title>
-    <link href="CSS_Styles/masterpage.css" rel="stylesheet" />
+     <link href="styles/css/main.css" rel="stylesheet" />
     <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-    
+    <%--<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />--%>
+    <link href="styles/css/fonts.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div>
@@ -18,11 +19,12 @@
                     <div id="banner-km">
                         <div class="header-top-right">
                             <div id="giohang">
-                                <img src="HinhAnh/giohang.png" />&nbsp;
-                        <a class="hover-info" href="#">Giỏ Hàng</a>
+                                <img src="styles/images/giohang.png" />&nbsp;
+                                <a class="hover-info" href="giohang.aspx">Giỏ Hàng</a>
+                                <span>(<asp:Label ID="lbSoLuongDonHang" runat="server" Text="Label"></asp:Label>)</span>
                             </div>
                             <div class="dangnhap">
-                                <img src="HinhAnh/dangnhap.png" />
+                                <img src="styles/images/dangnhap.png" />
                                 <a class="hover-info" href="#">Đăng Nhập/</a>
                                 <a class="hover-info" href="#">Đăng Ký</a>
                             </div>
@@ -35,17 +37,18 @@
                 <div class="container">
                     <div class="content-header">
                         <div class="logo-header desktop">
-                            <a href="#">
-                                <img src="Hinhanh/logomenu_vuanem.gif" /></a>
+                            <a href="trangchu.aspx">
+                                <img src="styles/images/logomenu_vuanem.gif" /></a>
                         </div>
                         <div class="main-menu desktop">
                             <div class="horizontal-menu">
                                 <ul class="group-menu">
                                     <li class="item level-top">
-                                        <a>
-                                            <img src="Hinhanh/menu_icon_nem.png" style="width: 50px; height: 30px" />
+                                        <a href="nem.aspx">
+                                            <img src="styles/images/menu_icon_nem.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Nệm</p>
-                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                        </a>
+                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">120 x190cm</a></li>
@@ -82,14 +85,14 @@
                                                     <li><a href="#">Cao su Gummi</a></li>
                                                 </ul>
                                             </div>
-                                        </a>
 
                                     </li>
                                     <li class="item level-top">
-                                        <a>
-                                            <img src="Hinhanh/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
+                                        <a href="changagoi.aspx">
+                                            <img src="styles/images/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Chăn Ga Gối</p>
-                                            <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 60px">
+                                        </a>
+                                            <div class="submenu" style="background-color: white; width: 50%; height: 300px; padding-left: 60px">
                                                 <ul class="submenulists">
                                                     <h3>Chọn kích thước</h3>
                                                     <li><a href="#">120 x200cm</a></li>
@@ -121,11 +124,11 @@
                                                     <li><a href="#">Pyeoda</a></li>
                                                 </ul>
                                             </div>
-                                        </a>
+                                        
                                     </li>
                                     <li class="item level-top">
                                         <a>
-                                            <img src="Hinhanh/menu_icon_phukien.png" style="width: 50px; height: 30px" />
+                                            <img src="styles/images/menu_icon_phukien.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Phụ kiện</p>
                                             <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 60px">
                                                 <ul class="submenulists">
@@ -164,7 +167,7 @@
                                     </li>
                                     <li class="item level-top">
                                         <a>
-                                            <img src="Hinhanh/menu_icon_giuong.png" style="width: 50px; height: 30px" />
+                                            <img src="styles/images/menu_icon_giuong.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Giường</p>
                                             <div class="submenu" style="z-index: 100; background-color: white; width: 50%; height: 300px; padding-left: 100px">
                                                 <ul class="submenulists">
@@ -197,7 +200,7 @@
                                     </li>
                                     <li class="item level-top">
                                         <a>
-                                            <img src="Hinhanh/menu_icon_vesinhnem.png" style="width: 50px; height: 30px" />
+                                            <img src="styles/images/menu_icon_vesinhnem.png" style="width: 50px; height: 30px" />
                                             <p style="text-align: center">Vệ sinh nệm</p>
                                         </a>
                                     </li>
@@ -222,15 +225,15 @@
             </div>
            
         </div>
-        <div id="content" style="margin-top: 50px; background-color: #f0f2f4; height: 540px">
+        <div id="main">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <div id="footer" style="margin-top: 50px;">
+        <div id="footer" class="container">
             <div class="bottom-footer-item report">
                 <div class="img">
                     <a>
-                        <img src="Hinhanh/vuanem-logo.png" style="width: 120px; height: 80px" alt="vuanem-logo" />
+                        <img src="styles/images/vuanem-logo.png" style="width: 120px;" alt="vuanem-logo" />
                     </a>
                     <p>
                         Gọi mua hàng (8h30 - 21:00)
@@ -288,9 +291,21 @@
             </div>
         </div>
 
-        <div class="copyright">
+        <div class="copyright container">
             <p>Mã số doanh nghiệp 0107968516 do Sở Kế hoạch Đầu tư Hà Nội cấp lần 1 ngày 18/8/2017</p>
         </div>
     </div>
+    
+    <script>
+        var fixmeTop = $('.header-center').offset().top;
+        $(window).scroll(function () {
+            var currentScroll = $(window).scrollTop();
+            if (currentScroll >= fixmeTop) {
+                $('.header-center').addClass("sticky-header");
+            } else {
+                $('.header-center').removeClass("sticky-header");
+            }
+        });
+    </script>
 </body>
 </html>
