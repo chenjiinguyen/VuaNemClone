@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
     <siteMapNode url="TrangChu.aspx" title="Trang Chủ"  description="">
-        <siteMapNode url="nem.aspx" title="Nệm"  description="" />
+        <siteMapNode url="nem.aspx" title="Nệm"  description="">
+          <siteMapNode url="chitietsanpham.aspx" title="Chi Tiết Sản Phẩm"  description="" />
+        </siteMapNode>
         <siteMapNode url="changa.aspx" title="Chăn Ga Gối"  description="" />
         <siteMapNode url="phukien.aspx" title="Phụ Kiện"  description="" />
         <siteMapNode url="giuong.aspx" title="Giường"  description="" />
