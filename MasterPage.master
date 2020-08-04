@@ -19,7 +19,8 @@
                         <div class="header-top-right">
                             <div id="giohang">
                                 <img src="styles/images/giohang.png" />&nbsp;
-                        <a class="hover-info" href="#">Giỏ Hàng</a>
+                                <a class="hover-info" href="#">Giỏ Hàng</a>
+                                <span>(<asp:Label ID="lbSoLuongDonHang" runat="server" Text="Label"></asp:Label>)</span>
                             </div>
                             <div class="dangnhap">
                                 <img src="styles/images/dangnhap.png" />

@@ -31,12 +31,22 @@
                                                 <asp:Label ID="lbGia" runat="server" ForeColor="#FF3C3B" Text='<%# string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:C0}", Eval("GIA")) %>' Font-Bold="True" Font-Size="28px"></asp:Label>
                                             </div>
                                             <hr style="margin: 10px 0">
-                                            <div style="width:50%;float:left">
-                                                <button class="btn-buy">
-                                                    MUA NGAY
-                                                </button>
+                                            <div style="width:40%;float:left;">
+                                                <div style="width:90%; padding:20px;">
+                                                    <div class='ctrl'>
+                                                      <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
+                                                      <div class='ctrl__counter'>
+                                                          <asp:TextBox ID="txtSoLuong" runat="server" CssClass="ctrl__counter-input" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);" Text="<%# 1 %>"></asp:TextBox>
+                                                          <div class='ctrl__counter-num'>1</div>
+                                                      </div>
+                                                      <div class='ctrl__button ctrl__button--increment'>+</div>
+                                                    </div>
+                                                </div>
+                                                <div style="width:90%; padding:10px 20px;">
+                                                    <asp:Button ID="btnMua" runat="server" Text='<%# "MUA NGAY" %>' CommandArgument='<%# Eval("MASANPHAM") %>' CssClass="btn-buy" OnCommand="btnMua_Command" />
+                                                 </div>
                                             </div>
-                                            <div style=" width:50%; float:right">
+                                            <div style=" width:60%; float:right">
                                                 
                                                 <table class="thongtin-chitiet" style="width:100%;">
                                                     <tr>
@@ -82,5 +92,6 @@
                 </div>
             </div>            
     </form>
+    <script src="styles/js/inputnumber.js"></script>
 </asp:Content>
 

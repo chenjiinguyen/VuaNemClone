@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Changagoi.aspx.cs" Inherits="HienThiSanPham" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="changagoi.aspx.cs" Inherits="HienThiSanPham" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
+        <script src="styles/js/inputnumber.js"></script>
         <div class="main">
              <div class="sitemap">
                  
@@ -44,41 +45,40 @@
              
             <div class="content" style="float:right; height: 58px; width:545px">
                 <asp:DataList ID="dataLoai" runat="server" Width="100%" RepeatColumns="3" RepeatDirection="Horizontal" >
-            <ItemTemplate>
-            <table style="border-style: solid; border-width: 1px; width:41%;">
-                <tr>
-                    <td class="auto-style1" style="width: 157px">
+                        <ItemTemplate>
+                        <table style="border-style: solid; border-width: 1px; width:41%;">
+                            <tr>
+                                <td class="auto-style1" style="width: 157px">
                         
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# "/Hinhanh/nembanchay/"+Eval("HinhMinhHoa") %>' Width="104%" />
+                                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# "/Hinhanh/nembanchay/"+Eval("HinhMinhHoa") %>' Width="104%" />
                         
-                    </td>
-                </tr>
-                <caption>
-                    &lt;<tr>
-                        <td style="text-align: center; width: 157px;">
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "/ChiTietSanPham.aspx?id="+Eval("MaSP") %>' Text='<%# "Chi Tiết" %>'>
-                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("TenNem") %>'></asp:Label>
-                        </asp:HyperLink>
-                        </td>
-                    </tr>
-                </caption>
-                <tr>
-                </tr>
-                <tr>
-                    <td style="text-align: left; width: 157px;">
-                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Gia") %>'></asp:Label>
-                    </td>
-                    <td style="text-align: right">               
-                        <asp:Button ID="Button1" runat="server" BackColor="#FF0066" ForeColor="White" Text="Mua Ngay" />                        
-                    </td> 
-                </tr>
+                                </td>
+                            </tr>
+                            <caption>
+                                &lt;<tr>
+                                    <td style="text-align: center; width: 157px;">
+                                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "/ChiTietSanPham.aspx?id="+Eval("MaSP") %>' Text='<%# "Chi Tiết" %>'>
+                                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("TenNem") %>'></asp:Label>
+                                    </asp:HyperLink>
+                                    </td>
+                                </tr>
+                            </caption>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; width: 157px;">
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Gia") %>'></asp:Label>
+                                </td>
+                                <td style="text-align: right">               
+                                    <asp:Button ID="Button1" runat="server" BackColor="#FF0066" ForeColor="White" Text="Mua Ngay" />                        
+                                </td> 
+                            </tr>
 
-            </table>
-        </ItemTemplate>
-    </asp:DataList>
+                        </table>
+                    </ItemTemplate>
+                </asp:DataList>
             </div>
         </div>
-
         
      
     </form>
