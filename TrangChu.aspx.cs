@@ -10,7 +10,7 @@ public partial class trangchu : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         ConnectDB sql = new ConnectDB();
-        String strSQL = "SELECT TOP 12 * FROM SANPHAM ORDER BY MASANPHAM ASC";
+        String strSQL = "SELECT TOP 8 * FROM SANPHAM ORDER BY MASANPHAM ASC";
         dataSanPham.DataSource = sql.queryToDataTable(strSQL);
         dataSanPham.DataBind();
     }

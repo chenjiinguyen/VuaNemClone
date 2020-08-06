@@ -6,10 +6,17 @@
 table {
     height: 250px;
     line-height: 30px;
-    padding-top: 16px;
-    padding-left: 385px;
 }
 
 td {
     color: #20315C;
+}
+
+.signup {
+    width: 800px;
+    line-height: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    margin: auto;
 }

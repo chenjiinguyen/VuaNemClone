@@ -12,15 +12,13 @@
 .signin {
     width: 600px;
     height: 350px;
-    margin-left: 50px;
     line-height: 50px;
     background-color: #fff;
-    margin-left: 350px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    margin-top: 20px;
     border-radius: 14px;
+    margin: auto;
 }
 
 .submitbtn {

@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <link href="styles/css/login.css" rel="stylesheet" />
-    <h2 style="font-weight: bolder; text-align: center; padding-top: 20px; color: #20315C; font-size: 26px;">Đăng Nhập</h2>
+    <h2 style="font-weight: bolder; text-align: center; padding-top: 20px; color: #20315C; font-size: 26px; margin-bottom: 20px;">Đăng Nhập</h2>
     <div class="signin">          
         <label for="email">Email Address</label>
         <input type="text" placeholder="Enter Email" name="email" id="email" onfocus="this.placeholder = ''"

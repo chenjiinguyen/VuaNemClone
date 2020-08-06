@@ -15,7 +15,7 @@
                             <ItemTemplate>
                                 <table style="width:100%;">
                                     <tr>
-                                        <td style="width: 445px">
+                                        <td style="width: 445px;padding: 20px;">
                                             <asp:Image ID="imgHinhMinhHoa" runat="server" ImageUrl='<%# "styles/images/nem/" + Eval("HINHMINHHOA") %>' Width="100%" />
                                         </td>
                                         <td style="padding: 20px; vertical-align: top; height: 407px;">

@@ -11,8 +11,27 @@ public partial class changagoi : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         ConnectDB sql = new ConnectDB(); 
-        String strSQL = "SELECT * FROM DBO.GET_LIST_NEM()";
-        dataLoai.DataSource = sql.queryToDataTable(strSQL);
-        dataLoai.DataBind();
+        if (Request["th"] != null)
+        {
+            String th = Request["th"];
+            String strSQL = "SELECT * FROM SANPHAM WHERE MALOAI = 'CGG' AND MATHUONGHIEU = '"+ th +"'";
+            dataSanPham.DataSource = sql.queryToDataTable(strSQL);
+            dataSanPham.DataBind();
+        }
+        else
+        {
+            String strSQL = "SELECT * FROM SANPHAM WHERE MALOAI = 'CGG'";
+            dataSanPham.DataSource = sql.queryToDataTable(strSQL);
+            dataSanPham.DataBind();
+        }
+        
+
+        String strSQL2 = "SELECT * FROM THUONGHIEU WHERE MALOAI = 'CGG'";
+        dataThuongHieu.DataSource = sql.queryToDataTable(strSQL2);
+        dataThuongHieu.DataBind();
     }
+
+
+    
+       
 }

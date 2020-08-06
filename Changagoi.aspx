@@ -17,7 +17,7 @@
                             <ItemTemplate>
                                 <div style="margin: 10px 10px 0px 10px">
                                     <span style="color: #f6a733; font-size: 16px;">✦</span>
-                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "nem.aspx?th=" + Eval("MATHUONGHIEU") %>' Text='<%# Eval("TENTHUONGHIEU") %>' Font-Size="16px"></asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "changagoi.aspx?th=" + Eval("MATHUONGHIEU") %>' Text='<%# Eval("TENTHUONGHIEU") %>' Font-Size="16px"></asp:HyperLink>
                                 </div>
                             </ItemTemplate>
                         </asp:DataList>
@@ -25,7 +25,7 @@
                     </div>
              
                     <div class="center-content" style="float:right; height: auto; width:75%; background-color: #FFFFFF;margin-bottom: 50px;">
-                        <asp:DataList ID="dataLoai" runat="server" Width="100%" RepeatColumns="3" RepeatDirection="Horizontal" CellSpacing="10" RepeatLayout="Flow" ShowFooter="False" ShowHeader="False" CssClass="dataGrid">
+                        <asp:DataList ID="dataSanPham" runat="server" Width="100%" RepeatColumns="3" RepeatDirection="Horizontal" CellSpacing="10" RepeatLayout="Flow" ShowFooter="False" ShowHeader="False" CssClass="dataGrid">
                             <AlternatingItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
                             <EditItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
                             <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
