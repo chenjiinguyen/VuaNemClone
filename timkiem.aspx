@@ -1,53 +1,27 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="trangchu.aspx.cs" Inherits="trangchu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="timkiem.aspx.cs" Inherits="timkiem" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <link href="styles/css/home.css" rel="stylesheet" />
-    <link href="styles/css/slideshow.css" rel="stylesheet" />
-    <div class="container">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <form id="form1" runat="server">
+        <div class="container">
+            <asp:DataList ID="dataSearch" runat="server" Width="100%">
+                <ItemTemplate>
+                    <div class="count-header">
+                        Có 
+                        <span class="count-pr">
+                            <asp:Label ID="lbNumber" runat="server" Text='<%# Eval("NUM") %>'></asp:Label>
+                        </span>
+                        <span> kết quả</span> với từ khoá &quot;
+                        <span class="text-value">
+                            <asp:Label ID="lbKeyword" runat="server" Text='<%# Eval("KEYWORD") %>'></asp:Label>
+                        </span>
+                        &quot;
 
-        <div>
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                    <img src="styles/images/imgslide/banner-sale50.jpg" style="width: 100%; height: 400px; margin-top: 20px;" />
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="styles/images/imgslide/banner-top5nep.jpg" style="width: 100%; height: 400px; margin-top: 20px;" />
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="styles/images/imgslide/gummi.jpg" style="width: 100%; height: 400px; margin-top: 20px; " />
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="styles/images/imgslide/mua-1-tang-1.jpg" style="width: 100%; height: 400px; margin-top: 20px;" />
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="styles/images/imgslide/banner_top5nemcaosu.jpg" style="width: 100%; height: 400px; margin-top: 20px;" />
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            </div>
-            <div style="text-align: center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-            </div>
-        </div>
-        <div class="list-content" style=" margin-top: 50px;">
-            <div class="cdz-block-title">
-                <h2 class="title-block ">SẢN PHẨM MỚI</h2>
-            </div>
-        </div>
-        <div class="list-content">
-            <div class="center-content" style="padding: 10px; float:right; height: auto; width:100%; background-color: #FFFFFF; margin-bottom: 50px;">
-            <asp:DataList ID="dataSanPham" runat="server" Width="100%" RepeatColumns="3" RepeatDirection="Horizontal" CellSpacing="10" RepeatLayout="Flow" ShowFooter="False" ShowHeader="False" CssClass="dataGrid" >
+                    </div>
+                </ItemTemplate>
+            </asp:DataList>
+            <div class="list-content">
+                <div class="center-content" style="padding: 10px; float:right; height: auto; width:100%; background-color: #FFFFFF; margin-bottom: 50px; margin-top: 50px;">
+                <asp:DataList ID="dataSanPham" runat="server" Width="100%" RepeatColumns="3" RepeatDirection="Horizontal" CellSpacing="10" RepeatLayout="Flow" ShowFooter="False" ShowHeader="False" >
                 <AlternatingItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
                 <EditItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
                 <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
@@ -98,18 +72,15 @@
                 <SelectedItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
                 <SeparatorStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
                 </asp:DataList>
+                </div>   
+            </div>  
         </div>
-        </div>
-        
-    </div>
-
-    <script src="styles/js/slideshow.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.arrange-fill').unwrap();
-            $('#ContentPlaceHolder1_dataSanPham').css({ "display": "flex", "flex-flow": "wrap", "align-items": "center", "justify-content": "flex-start" });
-        });
-    </script>   
+        <script>
+            $(document).ready(function () {
+                $('.arrange-fill').unwrap();
+                $('#ContentPlaceHolder1_dataSanPham').css({ "display": "flex", "flex-flow": "wrap", "align-items": "center", "justify-content": "flex-start" });
+            });
+        </script>                   
+    </form>
 </asp:Content>
-
 

@@ -10,15 +10,24 @@ public partial class nem : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         ConnectDB sql = new ConnectDB();
-        String strSQL = "SELECT * FROM DBO.GET_LIST_NEM()";
-        dataLoai.DataSource = sql.queryToDataTable(strSQL);
-        dataLoai.DataBind();
+        if (Request["th"] != null)
+        {
+            String th = Request["th"];
+            String strSQL = "SELECT * FROM DBO.GET_NEM_BY_TH('" + th + "')";
+            dataSanPham.DataSource = sql.queryToDataTable(strSQL);
+            dataSanPham.DataBind();
+        }else
+        {
+            String strSQL1 = "SELECT * FROM DBO.GET_LIST_NEM()";
+            dataSanPham.DataSource = sql.queryToDataTable(strSQL1);
+            dataSanPham.DataBind();
+        }
+        
+        
 
 
-        strSQL = "SELECT * FROM NEM_DOCUNG";
-        rbDoThoaiMai.DataSource = sql.queryToDataTable(strSQL);
-        rbDoThoaiMai.DataTextField = "TENDOCUNG";
-        rbDoThoaiMai.DataValueField = "MADOCUNG";
-        rbDoThoaiMai.DataBind();
+        String strSQL2 = "SELECT * FROM THUONGHIEU WHERE MALOAI = 'N'";
+        dataThuongHieu.DataSource = sql.queryToDataTable(strSQL2);
+        dataThuongHieu.DataBind();
     }
 }

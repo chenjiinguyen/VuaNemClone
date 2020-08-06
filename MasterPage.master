@@ -4,8 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Vua Nệm Hệ Thống Bán Lẻ</title>
-     <link href="styles/css/main.css" rel="stylesheet" />
+    <title>Vua Nệm - Hệ Thống Bán Lẻ Nệm</title>
+    <link rel="icon" type="image/x-icon" href="styles/images/favicon.ico">
+    <link href="styles/css/main.css" rel="stylesheet" />
     <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <%--<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />--%>
     <link href="styles/css/fonts.css" rel="stylesheet" />
@@ -13,301 +14,229 @@
 </head>
 <body>
     <div>
-        <div>
-            <div id="header">
-                <div class="container">
-                    <div id="title">
-                    <div id="banner-km">
-                        <div class="header-top-right">
-                            <div id="giohang">
-                                <img src="styles/images/giohang.png" />&nbsp;
-                                <a class="hover-info" href="giohang.aspx">Giỏ Hàng</a>
-                                <span>(<asp:Label ID="lbSoLuongDonHang" runat="server" Text="Label"></asp:Label>)</span>
-                            </div>
-                            <div class="dangnhap">
-                                <img src="styles/images/dangnhap.png" />
-                                <a class="hover-info" href="dangnhap.aspx">Đăng Nhập/</a>
-                                <a class="hover-info" href="dangky.aspx">Đăng Ký</a>
-                            </div>
+        <div id="header">
+            <div class="container">
+                <div id="title">
+                <div id="banner-km">
+                    <div class="header-top-right">
+                        <div id="giohang">
+                            <img src="styles/images/giohang.png" />&nbsp;
+                            <a class="hover-info" href="giohang.aspx">Giỏ Hàng</a>
+                            <span>(<asp:Label ID="lbSoLuongDonHang" runat="server" Text="Label"></asp:Label>)</span>
+                        </div>
+                        <div class="dangnhap">
+                            <img src="styles/images/dangnhap.png" />
+                            <a class="hover-info" href="dangnhap.aspx">Đăng Nhập/</a>
+                            <a class="hover-info" href="dangky.aspx">Đăng Ký</a>
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
+            </div>
+        </div>
 
-            <div class="header-center">
-                <div class="container">
-                    <div class="content-header">
-                        <div class="navbar">
-                            <div class="logo-header desktop">
-                            <a href="trangchu.aspx">
-                                <img src="styles/images/logomenu_vuanem.gif" /></a>
-                        </div>
-                            <div class="main-menu desktop">
-                            <div class="horizontal-menu">
-                                <ul class="group-menu">
-                                    <li class="item level-top">
-                                        <a href="nem.aspx">
-                                            <img src="styles/images/menu_icon_nem.png" style="width: 50px; height: 30px" />
-                                            <p style="text-align: center">Nệm</p>
-                                        </a>
-                                            <div class="submenu" >
-                                                <ul class="submenulists">
-                                                    <h3>Chọn kích thước</h3>
-                                                    <li><a href="#">120 x190cm</a></li>
-                                                    <li><a href="#">120 x200cm</a></li>
-                                                    <li><a href="#">150 x190cm</a></li>
-                                                    <li><a href="#">160 x200cm</a></li>
-                                                    <li><a href="#">180 x200cm</a></li>
-                                                    <li><a href="#">200 x200cm</a></li>
-                                                    <li><a href="#">200 x220cm</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Giá tiền</h3>
-                                                    <li><a href="#">Dưới 3 triệu</a></li>
-                                                    <li><a href="#">3 triệu - 5 triệu</a></li>
-                                                    <li><a href="#">5 triệu - 10 triệu</a></li>
-                                                    <li><a href="#">10 triệu - 30 triệu</a></li>
-                                                    <li><a href="#">10 triệu - 30 triệu</a></li>
-                                                    <li><a href="#">30 triệu - 50 triệu</a></li>
-                                                    <li><a href="#">Trên 50 triệu</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Loại nệm</h3>
-                                                    <li><a href="#">Nệm Bông Ép</a></li>
-                                                    <li><a href="#">Nệm Foam</a></li>
-                                                    <li><a href="#">Nệm Lò Xo</a></li>
-                                                    <li><a href="#">Nệm Cao Su</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Thương hiệu</h3>
-                                                    <li><a href="#">Amando</a></li>
-                                                    <li><a href="#">Kim Cương</a></li>
-                                                    <li><a href="#">Liên Á</a></li>
-                                                    <li><a href="#">Goodnight</a></li>
-                                                    <li><a href="#">Cao su Gummi</a></li>
-                                                </ul>
+        <div class="header-center">
+            <div class="container">
+                <div class="content-header">
+                    <div class="navbar">
+                        <div class="logo-header desktop">
+                        <a href="trangchu.aspx">
+                            <img src="styles/images/logomenu_vuanem.gif" /></a>
+                    </div>
+                        <div class="main-menu desktop">
+                        <div class="horizontal-menu">
+                            <ul class="group-menu">
+                                <li class="item level-top">
+                                    <a href="nem.aspx">
+                                        <img src="styles/images/menu_icon_nem.png" style="width: 50px; height: 30px" />
+                                        <p style="text-align: center">Nệm</p>
+                                    </a>
+                                        <div class="submenu" >
+                                            <ul class="submenulists">
+                                                <h3>Thương hiệu</h3>
+                                                <li><a href="#">Amando</a></li>
+                                                <li><a href="#">Kim Cương</a></li>
+                                                <li><a href="#">Liên Á</a></li>
+                                                <li><a href="#">Goodnight</a></li>
+                                                <li><a href="#">Cao su Gummi</a></li>
+                                            </ul>
+                                            <div class="submenulists">
+                                                <p>
+                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                </p>
                                             </div>
+                                        </div>
 
-                                    </li>
-                                    <li class="item level-top">
-                                        <a href="changagoi.aspx">
-                                            <img src="styles/images/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
-                                            <p style="text-align: center">Chăn Ga Gối</p>
-                                        </a>
-                                            <div class="submenu" >
-                                                <ul class="submenulists">
-                                                    <h3>Chọn kích thước</h3>
-                                                    <li><a href="#">120 x200cm</a></li>
-                                                    <li><a href="#">160 x200cm</a></li>
-                                                    <li><a href="#">180 x200cm</a></li>
-                                                    <li><a href="#">200 x220cm</a></li>
-                                                    <li><a href="#">Free Size</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Giá tiền</h3>
-                                                    <li><a href="#">Từ 1 - 2 triệu</a></li>
-                                                    <li><a href="#">2 - 3 triệu</a></li>
-                                                    <li><a href="#">3 - 4 triệu</a></li>
-                                                    <li><a href="#">Trên 4 triệu</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Bộ Chăn Ga</h3>
-                                                    <li><a href="#">Bộ chăn ga chun</a></li>
-                                                    <li><a href="#">Bộ chăn ga phủ</a></li>
-                                                    <li><a href="#">Chăn lẻ</a></li>
-                                                    <li><a href="#">Ga lẻ</a></li>
-                                                    <li><a href="#">Vỏ gối lẻ</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Thương hiệu</h3>
-                                                    <li><a href="#">Amando</a></li>
-                                                    <li><a href="#">Canada</a></li>
-                                                    <li><a href="#">Dreamland</a></li>
-                                                    <li><a href="#">Pyeoda</a></li>
-                                                </ul>
+                                </li>
+                                <li class="item level-top">
+                                    <a href="changagoi.aspx">
+                                        <img src="styles/images/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
+                                        <p style="text-align: center">Chăn Ga Gối</p>
+                                    </a>
+                                        <div class="submenu" >
+                                            <ul class="submenulists">
+                                                <h3>Thương hiệu</h3>
+                                                <li><a href="#">Amando</a></li>
+                                                <li><a href="#">Canada</a></li>
+                                                <li><a href="#">Dreamland</a></li>
+                                                <li><a href="#">Pyeoda</a></li>
+                                            </ul>
+                                            <div class="submenulists">
+                                                <p>
+                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                </p>
                                             </div>
+                                        </div>
                                         
-                                    </li>
-                                    <li class="item level-top">
-                                        <a>
-                                            <img src="styles/images/menu_icon_phukien.png" style="width: 50px; height: 30px" />
-                                            <p style="text-align: center">Phụ kiện</p>
-                                            <div class="submenu">
-                                                <ul class="submenulists">
-                                                    <h3>Chọn kích thước</h3>
-                                                    <li><a href="#">45 x 65cm</a></li>
-                                                    <li><a href="#">50 x 70cm</a></li>
-                                                    <li><a href="#">60 x 60cm</a></li>
-                                                    <li><a href="#">120 x 200cm</a></li>
-                                                    <li><a href="#">180 x 200cm</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Giá tiền</h3>
-                                                    <li><a href="#">Dưới 1 triệu</a></li>
-                                                    <li><a href="#">1 - 2 triệu</a></li>
-                                                    <li><a href="#">Trên 3 triệu</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Phụ kiện giấc ngủ</h3>
-                                                        <li><a href="#">Gối</a></li>
-                                                        <li><a href="#">Gối tựa trang trí</a></li>
-                                                        <li><a href="#">Tấm bảo vệ nệm</a></li>
-                                                        <li><a href="#">Tấm tăng tiện ích nệm</a></li>
-                                                        <li><a href="#">Ruột chăn</a></li>
-                                                        <li><a href="#">Phụ kiện khác</a></li>
-                                                    
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Thương hiệu</h3>
-                                                    <li><a href="#">Amando</a></li>
-                                                    <li><a href="#">Aeroflow</a></li>
-                                                    <li><a href="#">Arena</a></li>
-                                                    <li><a href="#">Doona</a></li>
-                                                </ul>
+                                </li>
+                                <li class="item level-top">
+                                    <a>
+                                        <img src="styles/images/menu_icon_phukien.png" style="width: 50px; height: 30px" />
+                                        <p style="text-align: center">Phụ kiện</p>
+                                        <div class="submenu">
+                                            <ul class="submenulists">
+                                                <h3>Thương hiệu</h3>
+                                                <li><a href="#">Amando</a></li>
+                                                <li><a href="#">Aeroflow</a></li>
+                                                <li><a href="#">Arena</a></li>
+                                                <li><a href="#">Doona</a></li>
+                                            </ul>
+                                            <div class="submenulists">
+                                                <p>
+                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                </p>
                                             </div>
-                                        </a>
-                                    </li>
-                                    <li class="item level-top">
-                                        <a>
-                                            <img src="styles/images/menu_icon_giuong.png" style="width: 50px; height: 30px" />
-                                            <p style="text-align: center">Giường</p>
-                                            <div class="submenu" >
-                                                <ul class="submenulists">
-                                                    <h3>Chọn kích thước</h3>
-                                                    <li><a href="#">180 x 200cm</a></li>
-                                                    <li><a href="#">160 x 200cm</a></li>
-                                                    <li><a href="#">60 x 60cm</a></li>
-                                                    <li><a href="#">120 x 200cm</a></li>
-                                                    <li><a href="#">200 x 200cm</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Giá tiền</h3>
-                                                    <li><a href="#">Từ 3 - 5 triệu</a></li>
-                                                    <li><a href="#">Từ 5 - 7 triệu</a></li>
-                                                    <li><a href="#">Trên 7 triệu</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Loại giường</h3>
-                                                    <li><a href="#">Giường Da</a></li>
-                                                    <li><a href="#">Giường Nĩ</a></li>
-                                                    <li><a href="#">Giường Sắt</a></li>
-                                                </ul>
-                                                <ul class="submenulists">
-                                                    <h3>Thương hiệu</h3>
-                                                    <li><a href="#">Amando</a></li>
-                                                    <li><a href="#">Baya</a></li>
-                                                </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item level-top">
+                                    <a>
+                                        <img src="styles/images/menu_icon_giuong.png" style="width: 50px; height: 30px" />
+                                        <p style="text-align: center">Giường</p>
+                                        <div class="submenu" >
+                                            <ul class="submenulists">
+                                                <h3>Thương hiệu</h3>
+                                                <li><a href="#">Amando</a></li>
+                                                <li><a href="#">Baya</a></li>
+                                            </ul>
+                                            <div class="submenulists">
+                                                <p>
+                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                </p>
                                             </div>
-                                        </a>
-                                    </li>
-                                    <li class="item level-top">
-                                        <a>
-                                            <img src="styles/images/menu_icon_vesinhnem.png" style="width: 50px; height: 30px" />
-                                            <p style="text-align: center">Vệ sinh nệm</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item level-top">
+                                    <a href="vesinhnem.aspx">
+                                        <img src="styles/images/menu_icon_vesinhnem.png" style="width: 50px; height: 30px" />
+                                        <p style="text-align: center">Vệ sinh nệm</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        </div>
+                    </div>
+                    </div>
                      
-                        <div class="search-bar">
-                            <form class="search-bar-form">
-                                <div class="field search">
-                                    <div class="control">
-                                        <input id="search" class="input-text" type="text" name="search" placeholder="Tìm kiếm..." onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Tìm kiếm...'" />
-                                    </div>
-                                    <div class="action">
-                                        <button class="search" type="submit" title="Tìm kiếm">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
+                    <div class="search-bar">
+                        <form action="timkiem.aspx" method="get" class="search-bar-form" >
+                            <div class="field search">
+                                <div class="control">
+                                    <input id="search" class="input-text" type="text" name="q" placeholder="Tìm kiếm..." onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Tìm kiếm...'" />
                                 </div>
+                                <div class="action">
+                                    <button class="search" type="submit" title="Tìm kiếm">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
 
                                 
-                            </form>
+                        </form>
 
-                        </div>
+                    </div>
                         
-                    </div>
                 </div>
+            </div>
                 
-            </div>
+        </div>
            
-        </div>
-        <div id="main">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <div id="footer" class="container">
-            <div class="bottom-footer-item report">
-                <div class="img">
-                    <a>
-                        <img src="styles/images/vuanem-logo.png" style="width: 120px;" alt="vuanem-logo" />
-                    </a>
-                    <p>
-                        Gọi mua hàng (8h30 - 21:00)
-                        <br />
-                        <span><a style="text-decoration: none; font-size: 18px; font-weight: bold; color: #20315C" href="#">1800 2092</a></span>
-                    </p>
-                    <p>
-                        Gọi khiếu nại (8h30 - 17:30)
-                        <br />
-                        <span><a style="text-decoration: none; font-size: 18px; font-weight: bold; color: #20315C" href="#">1800 2093</a></span>
-                    </p>
-                    <p>
-                        Email
-                        <br />
-                        <span style="font-weight: bold; font-size: 18px; color: #20315C">online@vuanem.com</span>
-                    </p>
-                    <p>Nghỉ chiều thứ 7 và Chủ nhật</p>
-                </div>
-            </div>
-            <div class="bottom-footer-item">
-                <p class="title"><span>Thông tin công ty</span></p>
-                <p><a href="#">Giới thiệu công ty</a></p>
-                <p><a href="#">Liên hệ</a></p>
-                <p><a href="#">Xem hệ thống cửa hàng</a></p>
-                <p><a href="#">Đối tác của Vua Nệm</a></p>
-                <p class="title" style="margin-top: 50px"><span>Social</span></p>
-                <div class="social-symbol">
-                    <div class="fb-symbol">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </div>
-                    <div class="symbol">
-                        <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </div>
-                    <div class="symbol">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
+    </div>
+    <div id="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="footer">
+                <div class="bottom-footer-item report">
+                    <div class="img">
+                        <a>
+                            <img src="styles/images/vuanem-logo.png" style="width: 120px;" alt="vuanem-logo" />
+                        </a>
+                        <p>
+                            Gọi mua hàng (8h30 - 21:00)
+                            <br />
+                            <span><a style="text-decoration: none; font-size: 18px; font-weight: bold; color: #20315C" href="#">1800 2092</a></span>
+                        </p>
+                        <p>
+                            Gọi khiếu nại (8h30 - 17:30)
+                            <br />
+                            <span><a style="text-decoration: none; font-size: 18px; font-weight: bold; color: #20315C" href="#">1800 2093</a></span>
+                        </p>
+                        <p>
+                            Email
+                            <br />
+                            <span style="font-weight: bold; font-size: 18px; color: #20315C">online@vuanem.com</span>
+                        </p>
+                        <p>Nghỉ chiều thứ 7 và Chủ nhật</p>
                     </div>
                 </div>
-            </div>
-            <div class="bottom-footer-item">
-                <p class="title"><span>Tin tức</span></p>
-                <p><a href="#">Khuyến mại</a></p>
-                <p><a href="#">Sức khỏe giấc ngủ</a></p>
-                <p><a href="#">Chuyên gia nệm</a></p>
-                <p><a href="#">Tuyển dụng</a></p>
-            </div>
-            <div class="bottom-footer-item">
-                <p class="title"><span>Hỗ trợ</span></p>
-                <p><a href="#">Điều khoản & Điều kiện</a></p>
-                <p><a href="#">Chính sách bảo mật</a></p>
-                <p><a href="#">Chính sách bảo hành</a></p>
-                <p><a href="#">Chính sách vận chuyển & giao nhận</a></p>
-                <p><a href="#">Điều khoản mua bán hàng hóa</a></p>
-                <p><a href="#">Chính sách đổi trả sản phẩm</a></p>
-                <p><a href="#">Câu hỏi thường gặp</a></p>
+                <div class="bottom-footer-item">
+                    <p class="title"><span>Thông tin công ty</span></p>
+                    <p><a href="#">Giới thiệu công ty</a></p>
+                    <p><a href="#">Liên hệ</a></p>
+                    <p><a href="#">Xem hệ thống cửa hàng</a></p>
+                    <p><a href="#">Đối tác của Vua Nệm</a></p>
+                    <p class="title" style="margin-top: 50px"><span>Social</span></p>
+                    <div class="social-symbol">
+                        <div class="fb-symbol">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="symbol">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </div>
+                        <div class="symbol">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-footer-item">
+                    <p class="title"><span>Tin tức</span></p>
+                    <p><a href="#">Khuyến mại</a></p>
+                    <p><a href="#">Sức khỏe giấc ngủ</a></p>
+                    <p><a href="#">Chuyên gia nệm</a></p>
+                    <p><a href="#">Tuyển dụng</a></p>
+                </div>
+                <div class="bottom-footer-item">
+                    <p class="title"><span>Hỗ trợ</span></p>
+                    <p><a href="#">Điều khoản & Điều kiện</a></p>
+                    <p><a href="#">Chính sách bảo mật</a></p>
+                    <p><a href="#">Chính sách bảo hành</a></p>
+                    <p><a href="#">Chính sách vận chuyển & giao nhận</a></p>
+                    <p><a href="#">Điều khoản mua bán hàng hóa</a></p>
+                    <p><a href="#">Chính sách đổi trả sản phẩm</a></p>
+                    <p><a href="#">Câu hỏi thường gặp</a></p>
+                </div>
             </div>
         </div>
 
-        <div class="copyright container">
-            <p>Mã số doanh nghiệp 0107968516 do Sở Kế hoạch Đầu tư Hà Nội cấp lần 1 ngày 18/8/2017</p>
-        </div>
     </div>
-    
+
+    <div class="copyright container">
+        <p>Mã số doanh nghiệp 0107968516 do Sở Kế hoạch Đầu tư Hà Nội cấp lần 1 ngày 18/8/2017</p>
+    </div>
     <script>
         var fixmeTop = $('.header-center').offset().top;
         $(window).scroll(function () {
@@ -317,6 +246,9 @@
             } else {
                 $('.header-center').removeClass("sticky-header");
             }
+        });
+        $(document).ready(function () {
+           
         });
     </script>
 </body>

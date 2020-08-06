@@ -227,15 +227,15 @@ ul li a{
 }
 
 .submenu {
-    display: flex;
+    /*display: flex;*/
     position: absolute;
-    padding-top: 20px;
+    padding: 30px;
     display: none;
     z-index: 90;
     background-color: white;
-    width: 50%; 
+    width: 25%; 
     height: 300px;
-    padding-left: 60px;
+    justify-content: space-between;
 }
 
 h3 {
@@ -252,21 +252,25 @@ h3 {
    float: left;
 }
 
-    .submenulists li a:hover {
-        color: red;
-        font-weight: bold;
+.submenulists li a:hover {
+    color: red;
+    font-weight: bold;
         
-    }
+}
 
 .item:hover .submenu {
-    display: block;
-    position:fixed;
+    display: flex;
+    /*position:fixed;*/
 }
 
 
 #footer {
     margin-top: 100px;
     border-top: 2px solid #eaeae1;
+    width: 100%;
+}
+
+.footer {
     display: flex;
     justify-content: space-between;
 }
@@ -336,12 +340,52 @@ h3 {
    
 }
 
+.count-header {
+    font-size: 24px;
+    color: #20315c;
+    background-color: #f0f2f4;
+    margin: 0 -10px;
+    padding: 10px 15px 15px;
+}
+
+.count-header span {
+    font-weight: 600;
+    color: #292bb7;
+}
+
 .sitemap {
     margin: 20px 0;
 }
 
 .list-content {
    background-color: #FFFFFF;
+   width:100%;
+   height: auto;
+   display:flex;
+}
+
+.left-content {
+    height: auto; 
+    width: 25%; 
+    text-align: left;
+    float:left;
+    background-color: #FFFFFF;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
+    padding: 10px;
+}
+.cdz-block-title {
+    padding: 15px 20px 0;
+}
+
+.cdz-block-title .title-block {
+    color: #292bb7;
+    text-transform: none;
+    border-bottom: 3px solid #292bb7;
+    display: inline-block;
+    margin: 0;
+    font-weight: 600;
+    padding-bottom: 8px;
 }
 
 .product-type-key-attributes{
@@ -647,18 +691,43 @@ increment-next {  from {
 
 
 /** LIST SAN PHAM **/
+.dataGrid .arrange-fill:nth-child(1) {
+    border-left: none;
+}
+
+.dataGrid .arrange-fill-4-item:nth-child(4n+1) {
+    border-left: none;
+}
+
+.dataGrid .arrange-fill-3-item:nth-child(3n+1) {
+    border-left: none;
+}
+
 .arrange-fill {
+    position: relative;
+    min-height: 1px;
+    padding: 0 10px 20px;
+    max-height: 380px;
+    border-left:solid 0.5px rgba(41,43,183,.2);
+    border-bottom: .5px solid rgba(41,43,183,.2)
+}
+
+.arrange-fill-4-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 23%;
+    flex: 1 1 23%;
+    max-width: 23%;
+    width: 23%;
+}
+
+.arrange-fill-3-item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 30%;
     flex: 1 1 30%;
     max-width: 30%;
-    position: relative;
     width: 30%;
-    min-height: 1px;
-    margin-bottom: 25px;
-    padding: 0 10px 20px;
-    max-height: 380px;
 }
+
 .arrange-fill .item-product {
     padding-bottom: 110px;
     width: 100%;

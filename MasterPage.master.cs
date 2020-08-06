@@ -10,17 +10,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+        int soLuongDonHang = 0;
+        if (Session["cart"] != null)
         {
-            int soLuongDonHang = 0;
-            if (Session["cart"] != null)
-            {
-                DataTable cart = (DataTable)Session["cart"];
-                soLuongDonHang = cart.Rows.Count;
-            }
-
-            lbSoLuongDonHang.Text = soLuongDonHang.ToString();
+            DataTable cart = (DataTable)Session["cart"];
+            soLuongDonHang = cart.Rows.Count;
         }
 
+        lbSoLuongDonHang.Text = soLuongDonHang.ToString();
     }
 }
