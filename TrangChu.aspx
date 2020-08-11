@@ -4,7 +4,6 @@
     <link href="styles/css/home.css" rel="stylesheet" />
     <link href="styles/css/slideshow.css" rel="stylesheet" />
     <div class="container">
-
         <div>
             <div class="slideshow-container">
 
@@ -40,13 +39,12 @@
                 <span class="dot" onclick="currentSlide(5)"></span>
             </div>
         </div>
-        <div class="list-content" style=" margin-top: 50px;">
-            <div class="cdz-block-title">
-                <h2 class="title-block ">SẢN PHẨM MỚI</h2>
-            </div>
-        </div>
+
         <div class="list-content">
-            <div class="center-content" style="padding: 10px; float:right; height: auto; width:100%; background-color: #FFFFFF; margin-bottom: 50px;">
+            <div class="center-content" style="padding: 10px; float:right; height: auto; width:100%; background-color: #FFFFFF; margin-bottom: 50px;margin-top: 20px;">
+                <div class="cdz-block-title" style=" margin-bottom: 20px;">
+                    <h2 class="title-block ">SẢN PHẨM MỚI</h2>
+                </div>
             <asp:DataList ID="dataSanPham" runat="server" Width="100%" RepeatColumns="3" RepeatDirection="Horizontal" CellSpacing="10" RepeatLayout="Flow" ShowFooter="False" ShowHeader="False" CssClass="dataGrid" >
                 <AlternatingItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
                 <EditItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Wrap="False" />
@@ -58,7 +56,7 @@
                             <div class="list-image-wrapper">
                                 <div class="productimage listview">
                                         <asp:HyperLink ID="linkSPIMG" runat="server" NavigateUrl='<%# "chitietsanpham.aspx?id="+Eval("MASANPHAM") %>'>
-                                        <asp:Image ID="imgHinhMinhHoa" runat="server" ImageUrl='<%# "styles/images/nem/" + Eval("HINHMINHHOA") %>' Width="100%" />
+                                        <asp:Image ID="imgHinhMinhHoa" runat="server" ImageUrl='<%# "styles/images/thumbnail/" + Eval("HINHMINHHOA") %>' Width="100%" />
                                     </asp:HyperLink>
                                 </div>
                                             
@@ -100,7 +98,45 @@
                 </asp:DataList>
         </div>
         </div>
-        
+        <div class="list-content">
+            <div class="center-content" style="padding: 10px; float:right; height: auto; width:100%; background-color: #FFFFFF; margin-bottom: 10px;margin-top: 20px;">
+                <div class="top-footer">
+                    <h2 class="title">Tại sao lại chọn Vua Nệm</h2>
+                    <div class="benefit">
+                        <div class="benefit-item">
+                            <div class="image">
+                                <a href="#">
+                                     <img src="styles/images/top-footer/footer_top_1.png" width="101" height="70">
+                                </a>
+                            </div>
+                            <p>
+                                60 giây<br>
+                                <span> chọn nệm</span>
+                            </p>
+                            <p class="detail">
+                                Cùng Vua Nệm đi tìm chiếc nệm phù hợp nhất với bạn và gia đình chỉ trong vài bước duy nhất
+                            </p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="image free-trial-image"><a href="#"><img src="styles/images/top-footer/footer_top_2.png" width="101" height="70"></a></div>
+                            <p class="free-trial">365 đêm<br><span> nằm thử</span></p>
+                            <p class="detail">Hãy “làm quen” với người bạn đồng hành trong hành trình đi tìm giấc mơ đẹp nào</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="image"><a href="#"><img src="styles/images/top-footer/footer_top_31.png" width="101" height="70"></a></div>
+                            <p>Trả góp<br><span> 0% lãi suất</span></p>
+                            <p class="detail">Ngủ ngon mà vẫn dày ví, xua tan nỗi lo tài chính khi sử dụng những sản phẩm cao cấp, chất lượng</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="image"><a href="#"><img src="styles/images/top-footer/footer_top_4.png" width="101" height="70"></a></div>
+                            <p>Vận chuyển<br><span> miễn phí</span></p>
+                            <p class="detail">Giao hàng tận giường, miễn phí các đơn hàng từ 1.000.000đ trở lên đối với tất cả sản phẩm</p>
+                            </div>
+                        </div>
+                </div>
+             </div>
+        </div>
+
     </div>
 
     <script src="styles/js/slideshow.js"></script>

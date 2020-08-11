@@ -11,4 +11,17 @@ public partial class DangKy : System.Web.UI.Page
     {
         MViewTrangDangKy.ActiveViewIndex = 0;
     }
+    protected void btnGui_Click(object sender, EventArgs e)
+    {
+        ConnectDB sql = new ConnectDB();
+        String SQLstr = "INSERT INTO KHACHHANG(USERNAME, HOTEN, EMAIL, MATKHAU, SDT) VALUES ('" + txtTenDN.Text + "', '" + txtHoTen.Text + "', '" + txtEmail.Text + "', '" + txtMK.Text + "', '" + txtSDT.Text + "')";
+        if(sql.queryToExec(SQLstr))
+        {
+            Session["TenKH"] = txtHoTen.Text;
+            Session["username"] = txtTenDN.Text;
+            Response.Redirect("TrangChu.aspx");
+        }
+        
+    }
 }
+

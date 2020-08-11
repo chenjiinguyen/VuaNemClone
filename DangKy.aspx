@@ -10,19 +10,11 @@
                 <div class="cont-table" >
                         <table style="width: 100%">
                             <tr>
-                                <td text-align: right" style="width: 216px; text-align: right;">Họ và tên đệm <span>(*)&nbsp;&nbsp; </span> </td>
+                                <td text-align: right" style="width: 216px; text-align: right;">Họ và tên <span>(*)&nbsp;&nbsp; </span> </td>
                                 <td style="width: 221px">
-                                    <asp:TextBox ID="txtHoTenDem" runat="server" Width="212px" Height="24px"></asp:TextBox></td>
+                                    <asp:TextBox ID="txtHoTen" runat="server" Width="212px" Height="24px"></asp:TextBox></td>
                                 <td>&nbsp;
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtHoTenDem" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Bắt buộc nhập</asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right; width: 216px;">Tên <span>(*)&nbsp;&nbsp; </span></td>
-                                <td style="width: 221px">
-                                    <asp:TextBox ID="txtTen" runat="server" Width="212px" Height="24px"></asp:TextBox></td>
-                                <td>&nbsp;
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTen" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Bắt buộc nhập</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtHoTen" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Bắt buộc nhập</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -64,59 +56,9 @@
                                     &nbsp;</td>
                             </tr>
                             <tr>
-                                <td style="text-align: right; width: 216px;">Ảnh đại diện&nbsp;&nbsp; </td>
-                                <td style="width: 221px">
-                                    <asp:FileUpload ID="fileUpImg" runat="server" Width="218px" Height="24px" />
-                            
-                                </td>
-                                <td></td>
-                            </tr>
-                             <tr>
-                               <td style="text-align: right; width: 216px;">Tỉnh/Thành phố <span>(*)&nbsp;&nbsp; </span></td>
-                                <td style="width: 221px">
-                                    <asp:DropDownList ID="drTinhThanh" runat="server" Width="212px" style="margin-left: 0px" Height="24px">
-                                        <asp:ListItem>Chọn tỉnh</asp:ListItem>
-                                        <asp:ListItem>TP HCM</asp:ListItem>
-                                        <asp:ListItem>Phú Yên</asp:ListItem>
-                                        <asp:ListItem>Đồng Nai</asp:ListItem>
-                                        <asp:ListItem>Bình Dương</asp:ListItem>
-                                    </asp:DropDownList>
-                                </td>
-                                <td>
-                                    &nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="drTinhThanh" ErrorMessage="RequiredFieldValidator">Bắt buộc nhập</asp:RequiredFieldValidator>
-                                    &nbsp;</td>
-                            </tr>
-                             <tr>
-                               <td style="text-align: right; width: 216px; height: 26px;">Ngày sinh <span>(*)&nbsp;&nbsp; </span></td>
-                                <td style="height: 26px; width: 221px">
-                                    <asp:DropDownList ID="drNgSinh" runat="server" Width="53px" Height="24px">
-                                        <asp:ListItem>1</asp:ListItem>
-                                        <asp:ListItem>2</asp:ListItem>
-                                        <asp:ListItem></asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:DropDownList ID="drThang" runat="server" Width="61px" Height="24px">
-                                        <asp:ListItem>1</asp:ListItem>
-                                        <asp:ListItem>2</asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:DropDownList ID="drNam" runat="server" Width="92px" Height="24px">
-                                        <asp:ListItem>2000</asp:ListItem>
-                                    </asp:DropDownList>
-                                </td>
-                                <td style="height: 26px">&nbsp;
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="drNgSinh" ErrorMessage="RequiredFieldValidator">Bắt buộc nhập</asp:RequiredFieldValidator>
-                                 </td>
-                            </tr>
-                              <tr>
-                               <td style="text-align: right; width: 216px;"><span>(*)</span> <asp:CheckBox ID="checkBox" runat="server" />&nbsp;&nbsp; </td>
-                                <td style="width: 221px">
-                                    Tôi đồng ý với các quy định
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
                                <td style="text-align: right; width: 216px;"></td>
                                 <td colspan="2">
-                                     <asp:Button ID="btnGui" runat="server" style="outline:none" Text="GỬI" BackColor="#2490D4" BorderColor="#2490D4" ForeColor="White" Width="80px" Height="33px" />
+                                     <asp:Button ID="btnGui" runat="server" style="outline:none" Text="GỬI" BackColor="#2490D4" BorderColor="#2490D4" ForeColor="White" Width="80px" Height="33px" OnClick="btnGui_Click" />
                                      <asp:Button ID="btnNhapLai" runat="server" style="outline:none; margin-left: 60px" Text="NHẬP LẠI" BorderColor="#2490D4" BackColor="#2490D4" ForeColor="White" Height="36px" Width="81px" />
                                 </td>
                             </tr>
@@ -156,27 +98,6 @@
                                     <asp:Label ID="lbSDT" runat="server" ForeColor="Black" Text="Label"></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right; width: 176px;">Ảnh đại diện&nbsp;&nbsp; </td>
-                                <td style="width: 221px">
-                                    <asp:Image ID="Image1" runat="server" Height="100px" Width="80px" />
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right; width: 176px;">Tỉnh/Thành phố: <span>&nbsp; </span></td>
-                                <td style="width: 221px">
-                                    <asp:Label ID="lbTinhThanh" runat="server" ForeColor="Black" Text="Label"></asp:Label>
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right; width: 176px; height: 26px;">Ngày sinh: <span>&nbsp; </span></td>
-                                <td style="height: 26px; width: 221px">
-                                    <asp:Label ID="lbNgSinh" runat="server" ForeColor="Black" Text="Label"></asp:Label>
-                                </td>
-                                <td style="height: 26px">&nbsp;</td>
                             </tr>
                             <tr>
                                 <td style="width: 20%; height: 20%; text-align: right">&nbsp;</td>

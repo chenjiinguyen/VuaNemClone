@@ -233,10 +233,11 @@ ul li a{
     display: none;
     z-index: 90;
     background-color: white;
-    width: 25%; 
+    width: 400px; 
     height: 300px;
     justify-content: space-between;
 }
+
 
 h3 {
     font-weight: bold;
@@ -358,8 +359,7 @@ h3 {
 }
 
 .list-content {
-   background-color: #FFFFFF;
-   width:100%;
+   width:  100%;
    height: auto;
    display:flex;
 }
@@ -703,6 +703,13 @@ increment-next {  from {
     border-left: none;
 }
 
+.dataGrid {
+    display: flex !important;
+    flex-flow: wrap; 
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .arrange-fill {
     position: relative;
     min-height: 1px;
@@ -1033,4 +1040,131 @@ increment-next {  from {
  -webkit-transform: translateY(50px);
  transform: translateY(50px);
 }
+}
+
+#info-customer {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 60%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+ .infor-customer {
+    background: #fff;
+    padding: 20px 15px;
+}
+
+ #info-customer .address-information {
+    background: #fff;
+    padding: 0 15px 10px;
+}
+
+
+ #info-customer .payment-method {
+    background: #fff;
+    padding: 20px 15px;
+    margin: 30px 0 0;
+}
+
+
+ .title-block {
+    font-size: 18px;
+    color: #20315c;
+}
+ #info-customer .address-information {
+    background: #fff;
+    padding: 0 15px 10px;
+}
+
+ #info-customer .payment-method {
+    background: #fff;
+    padding: 20px 15px;
+    margin: 30px 0 0;
+}
+
+#info-customer .payment-method .check-box-container {
+    padding: 20px 40px 0;
+}
+
+.personal-information {
+    padding: 20px 40px 0;
+}
+
+#info-customer .title-block .number {
+    background-color: #20315c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.personal-information .wapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.personal-information .wapper .information {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.personal-information .wapper .information .title-input {
+    font-size: 16px;
+    color: #20315c;
+    margin-bottom: 10px;
+}
+
+.personal-information .wapper .information input.error, .checkout-desktop .onepage-checkout .personal-information .wapper .information select.error, .checkout-desktop .onepage-checkout .personal-information .wapper .information textarea.error {
+    border-color: #e02b27;
+}
+
+.personal-information .wapper .information input, .checkout-desktop .onepage-checkout .personal-information .wapper .information select {
+    height: 42px;
+    line-height: 42px;
+}
+
+.personal-information .wapper .information input, .checkout-desktop .onepage-checkout .personal-information .wapper .information select, .checkout-desktop .onepage-checkout .personal-information .wapper .information textarea {
+    font-style: normal;
+    padding: 0 15px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border: 1px solid rgba(32,49,92,.2);
+    font-size: 16px;
+    color: #20315c;
+    border-radius: 4px;
+    font-family: inherit;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.validate-errors {
+    margin-top: 10px;
+    color: #e02b27;
+    font-size: 12px;
+    display: block;
+}
+
+.personal-information .wapper .information.half-column {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
 }

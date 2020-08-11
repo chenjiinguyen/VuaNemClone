@@ -24,9 +24,9 @@ public partial class changagoi : System.Web.UI.Page
             dataSanPham.DataSource = sql.queryToDataTable(strSQL);
             dataSanPham.DataBind();
         }
-        
 
-        String strSQL2 = "SELECT * FROM THUONGHIEU WHERE MALOAI = 'CGG'";
+
+        String strSQL2 = "SELECT * FROM THUONGHIEU WHERE MALOAI = 'CGG' ORDER BY TENTHUONGHIEU ASC";
         dataThuongHieu.DataSource = sql.queryToDataTable(strSQL2);
         dataThuongHieu.DataBind();
     }

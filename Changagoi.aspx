@@ -36,7 +36,7 @@
                                         <div class="list-image-wrapper">
                                             <div class="productimage listview">
                                                  <asp:HyperLink ID="linkSPIMG" runat="server" NavigateUrl='<%# "chitietsanpham.aspx?id="+Eval("MASANPHAM") %>'>
-                                                    <asp:Image ID="imgHinhMinhHoa" runat="server" ImageUrl='<%# "styles/images/nem/" + Eval("HINHMINHHOA") %>' Width="100%" />
+                                                    <asp:Image ID="imgHinhMinhHoa" runat="server" ImageUrl='<%# "styles/images/thumbnail/" + Eval("HINHMINHHOA") %>' Width="100%" />
                                                 </asp:HyperLink>
                                             </div>
                                             
@@ -82,7 +82,6 @@
          <script>
              $(document).ready(function () {
                  $('.arrange-fill').unwrap();
-                 $('#ContentPlaceHolder1_dataLoai').css({ "display": "flex", "flex-flow": "wrap" ,"align-items":"center","justify-content":"center"});
              });
          </script>                  
     </form>

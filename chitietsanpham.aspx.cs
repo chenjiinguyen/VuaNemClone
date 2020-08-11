@@ -15,7 +15,7 @@ public partial class chitietsanpham : System.Web.UI.Page
             if (Request["id"].Length > 0 && Request["id"] != null)
             {
                 String id = Request["id"];
-                String strSQL = "SELECT * FROM DBO.GET_NEM('" + id + "')";
+                String strSQL = "SELECT * FROM SANPHAM SP,THUONGHIEU TH WHERE TH.MATHUONGHIEU = SP.MATHUONGHIEU AND SP.MASANPHAM = '" + id + "'";
                 dataSanPham.DataSource = sql.queryToDataTable(strSQL);
                 dataSanPham.DataBind();
             }
@@ -28,7 +28,7 @@ public partial class chitietsanpham : System.Web.UI.Page
     protected void btnMua_Command(object sender, CommandEventArgs e)
     {
         String id = Request["id"];
-        String strSQL = "SELECT * FROM DBO.GET_NEM('" + id + "')";
+        String strSQL = "SELECT * FROM SANPHAM WHERE MASANPHAM ='"+ id +"'";
         DataTable sp = sql.queryToDataTable(strSQL);
 
         var btn = (Button)  sender;
@@ -67,6 +67,7 @@ public partial class chitietsanpham : System.Web.UI.Page
 
             Session["cart"] = cart;
         }
+        Response.Redirect(Request.RawUrl);  
     }
 
     private int Contain(DataTable arr, String MASANPHAM)

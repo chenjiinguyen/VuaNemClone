@@ -8,15 +8,15 @@
                      <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathDirection="RootToCurrent">
                      </asp:SiteMapPath>
                 </div>
-                <div class="list-content">
-                    <div class="center-content" style="float:right; height: auto; width:100%; background-color: #FFFFFF;margin-bottom: 50px;">
-                       
-                        <asp:DataList ID="dataSanPham" runat="server" Width="100%">
+
+               <asp:DataList ID="dataSanPham" runat="server" Width="100%">
                             <ItemTemplate>
-                                <table style="width:100%;">
+                                <div class="list-content" style="margin-bottom: 30px;">
+                                    <div class="center-content" style="float:right; height: auto; width:100%; background-color: #FFFFFF;">         
+                                      <table style="width:100%;">
                                     <tr>
                                         <td style="width: 445px;padding: 20px;">
-                                            <asp:Image ID="imgHinhMinhHoa" runat="server" ImageUrl='<%# "styles/images/nem/" + Eval("HINHMINHHOA") %>' Width="100%" />
+                                            <asp:Image ID="imgHinhMinhHoa" runat="server" ImageUrl='<%# "styles/images/thumbnail/" + Eval("HINHMINHHOA") %>' Width="100%" />
                                         </td>
                                         <td style="padding: 20px; vertical-align: top; height: 407px;">
                                             <div>
@@ -48,29 +48,31 @@
                                             </div>
                                             <div style=" width:60%; float:right">
                                                 
-                                                <table class="thongtin-chitiet" style="width:100%;">
+                                               
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                    </div>
+                                </div>
+                                <div class="list-content">
+                                    <div class="center-content" style="float:right; height: auto; width:65%; background-color: #FFFFFF;margin-bottom: 10px; margin-right:10px">         
+                                        <div class="cdz-block-title">
+                                            <h2 class="title-block ">ĐẶC ĐIỂM SẢN PHẨM</h2>
+                                        </div>
+                                        <p>
+                                            <asp:Label ID="lbThongTin" runat="server" Text='<%# Eval("THONGTIN") %>'></asp:Label>
+                                        </p>
+                                    </div>
+                                    <div class="right-content" style="float:right; height: auto; width:35%; background-color: #FFFFFF;margin-bottom: 10px;">         
+                                        <div class="cdz-block-title">
+                                            <h2 class="title-block ">THÔNG SỐ KĨ THUẬT</h2>
+                                        </div>
+                                         <table class="thongtin-chitiet" style="width:100%;padding: 15px 20px 0;">
                                                     <tr>
                                                         <td style="width: 50%; height: 18px;">Thương Hiệu</td>
                                                         <td style="height: 18px">
                                                             <asp:Label ID="lbLoai" runat="server" Text='<%# Eval("TENTHUONGHIEU") %>'></asp:Label>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="width: 167px">Độ Cứng Mềm</td>
-                                                        <td>
-                                                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("TENDOCUNG") %>'></asp:Label>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="width: 167px">Chất Liệu</td>
-                                                        <td>
-                                                            <asp:Label ID="Label3" runat="server" Text='<%# Eval("TENCHATLIEU") %>'></asp:Label>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="width: 167px">Đặc Điểm&nbsp;</td>
-                                                        <td>
-                                                            <asp:Label ID="Label4" runat="server" Text='<%# Eval("TENTHIETKE") %>'></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -81,15 +83,12 @@
                                                     </tr>
                                                 </table>
                                                 
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
+                                    </div>
+                                </div>
                             </ItemTemplate>
                         </asp:DataList>
                        
-                    </div>
-                </div>
+
             </div>            
     </form>
     <script src="styles/js/inputnumber.js"></script>

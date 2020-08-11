@@ -4,7 +4,7 @@
         <siteMapNode url="nem.aspx" title="Nệm"  description="">
           <siteMapNode url="chitietsanpham.aspx" title="Chi Tiết Sản Phẩm"  description="" />
         </siteMapNode>
-        <siteMapNode url="changa.aspx" title="Chăn Ga Gối"  description="" />
+        <siteMapNode url="changagoi.aspx" title="Chăn Ga Gối"  description="" />
         <siteMapNode url="phukien.aspx" title="Phụ Kiện"  description="" />
         <siteMapNode url="giuong.aspx" title="Giường"  description="" />
     </siteMapNode>

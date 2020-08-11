@@ -26,8 +26,16 @@
                         </div>
                         <div class="dangnhap">
                             <img src="styles/images/dangnhap.png" />
-                            <a class="hover-info" href="dangnhap.aspx">Đăng Nhập/</a>
-                            <a class="hover-info" href="dangky.aspx">Đăng Ký</a>
+                            <asp:MultiView ID="viewLogin" runat="server">
+                                <asp:View ID="Guest" runat="server">
+                                    <a class="hover-info" href="dangnhap.aspx">Đăng Nhập/</a>
+                                    <a class="hover-info" href="dangky.aspx">Đăng Ký</a>
+                                </asp:View>
+                                <asp:View ID="User" runat="server">
+                                    <span>Xin Chào <asp:Label ID="lbTenKH" runat="server" Text=""></asp:Label>,</span>
+                                    <a class="hover-info" href="dangxuat.aspx" style="margin-left: 10px">Đăng Xuất</a>
+                                </asp:View>
+                            </asp:MultiView>
                         </div>
                     </div>
                 </div>
@@ -54,11 +62,11 @@
                                         <div class="submenu" >
                                             <ul class="submenulists">
                                                 <h3>Thương hiệu</h3>
-                                                <li><a href="#">Amando</a></li>
-                                                <li><a href="#">Kim Cương</a></li>
-                                                <li><a href="#">Liên Á</a></li>
-                                                <li><a href="#">Goodnight</a></li>
-                                                <li><a href="#">Cao su Gummi</a></li>
+                                                <asp:DataList ID="dataNavNem" runat="server" RepeatLayout="Flow" CssClass="listnav">
+                                                    <ItemTemplate>
+                                                        <li><asp:HyperLink ID="linkA" runat="server" NavigateUrl='<%# "nem.aspx?th="+ Eval("MATHUONGHIEU") %>' Text='<%# Eval("TENTHUONGHIEU") %>'></asp:HyperLink></li>
+                                                    </ItemTemplate>
+                                                </asp:DataList>
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
@@ -76,10 +84,11 @@
                                         <div class="submenu" >
                                             <ul class="submenulists">
                                                 <h3>Thương hiệu</h3>
-                                                <li><a href="#">Amando</a></li>
-                                                <li><a href="#">Canada</a></li>
-                                                <li><a href="#">Dreamland</a></li>
-                                                <li><a href="#">Pyeoda</a></li>
+                                                <asp:DataList ID="dataNavCGG" runat="server" RepeatLayout="Flow" CssClass="listnav">
+                                                    <ItemTemplate>
+                                                        <li><asp:HyperLink ID="linkA" runat="server" NavigateUrl='<%# "changagoi.aspx?th="+ Eval("MATHUONGHIEU") %>' Text='<%# Eval("TENTHUONGHIEU") %>'></asp:HyperLink></li>
+                                                    </ItemTemplate>
+                                                </asp:DataList>
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
@@ -90,16 +99,18 @@
                                         
                                 </li>
                                 <li class="item level-top">
-                                    <a>
+                                    <a href="phukien.aspx">
                                         <img src="styles/images/menu_icon_phukien.png" style="width: 50px; height: 30px" />
                                         <p style="text-align: center">Phụ kiện</p>
+                                    </a>
                                         <div class="submenu">
                                             <ul class="submenulists">
                                                 <h3>Thương hiệu</h3>
-                                                <li><a href="#">Amando</a></li>
-                                                <li><a href="#">Aeroflow</a></li>
-                                                <li><a href="#">Arena</a></li>
-                                                <li><a href="#">Doona</a></li>
+                                                <asp:DataList ID="dataNavPK" runat="server" RepeatLayout="Flow" CssClass="listnav">
+                                                    <ItemTemplate>
+                                                        <li><asp:HyperLink ID="linkA" runat="server" NavigateUrl='<%# "phukien.aspx?th="+ Eval("MATHUONGHIEU") %>' Text='<%# Eval("TENTHUONGHIEU") %>'></asp:HyperLink></li>
+                                                    </ItemTemplate>
+                                                </asp:DataList>
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
@@ -107,17 +118,21 @@
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
+                                    
                                 </li>
                                 <li class="item level-top">
-                                    <a>
+                                    <a href="giuong.aspx">
                                         <img src="styles/images/menu_icon_giuong.png" style="width: 50px; height: 30px" />
                                         <p style="text-align: center">Giường</p>
+                                    </a>
                                         <div class="submenu" >
                                             <ul class="submenulists">
                                                 <h3>Thương hiệu</h3>
-                                                <li><a href="#">Amando</a></li>
-                                                <li><a href="#">Baya</a></li>
+                                                <asp:DataList ID="dataNavGiuong" runat="server" RepeatLayout="Flow" CssClass="listnav">
+                                                    <ItemTemplate>
+                                                        <li><asp:HyperLink ID="linkA" runat="server" NavigateUrl='<%# "giuong.aspx?th="+ Eval("MATHUONGHIEU") %>' Text='<%# Eval("TENTHUONGHIEU") %>'></asp:HyperLink></li>
+                                                    </ItemTemplate>
+                                                </asp:DataList>
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
@@ -125,7 +140,7 @@
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
+
                                 </li>
                                 <li class="item level-top">
                                     <a href="vesinhnem.aspx">
@@ -248,7 +263,10 @@
             }
         });
         $(document).ready(function () {
-           
+            $("ul.submenulists").each(function (index) {
+                $(this).find("h3,li").appendTo(this);
+                $(this).find("span,br").remove();
+            });
         });
     </script>
 </body>
