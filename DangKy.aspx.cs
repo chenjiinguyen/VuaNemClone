@@ -14,7 +14,7 @@ public partial class DangKy : System.Web.UI.Page
     protected void btnGui_Click(object sender, EventArgs e)
     {
         ConnectDB sql = new ConnectDB();
-        String SQLstr = "INSERT INTO KHACHHANG(USERNAME, HOTEN, EMAIL, MATKHAU, SDT) VALUES ('" + txtTenDN.Text + "', '" + txtHoTen.Text + "', '" + txtEmail.Text + "', '" + txtMK.Text + "', '" + txtSDT.Text + "')";
+        String SQLstr = "INSERT INTO KHACHHANG(USERNAME, HOTEN, EMAIL, MATKHAU, SDT) VALUES ('" + txtTenDN.Text + "', N'" + txtHoTen.Text + "', '" + txtEmail.Text + "', '" + txtMK.Text + "', '" + txtSDT.Text + "')";
         if(sql.queryToExec(SQLstr))
         {
             Session["TenKH"] = txtHoTen.Text;
