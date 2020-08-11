@@ -20,12 +20,12 @@
                 <div id="banner-km">
                     <div class="header-top-right">
                         <div id="giohang">
-                            <img src="styles/images/giohang.png" />&nbsp;
+                            <img src="styles/images/header/giohang.png" />&nbsp;
                             <a class="hover-info" href="giohang.aspx">Giỏ Hàng</a>
                             <span>(<asp:Label ID="lbSoLuongDonHang" runat="server" Text="Label"></asp:Label>)</span>
                         </div>
                         <div class="dangnhap">
-                            <img src="styles/images/dangnhap.png" />
+                            <img src="styles/images/header/dangnhap.png" />
                             <asp:MultiView ID="viewLogin" runat="server">
                                 <asp:View ID="Guest" runat="server">
                                     <a class="hover-info" href="dangnhap.aspx">Đăng Nhập/</a>
@@ -49,14 +49,14 @@
                     <div class="navbar">
                         <div class="logo-header desktop">
                         <a href="trangchu.aspx">
-                            <img src="styles/images/logomenu_vuanem.gif" /></a>
+                            <img src="styles/images/logo/logomenu_vuanem.gif" /></a>
                     </div>
                         <div class="main-menu desktop">
                         <div class="horizontal-menu">
                             <ul class="group-menu">
                                 <li class="item level-top">
                                     <a href="nem.aspx">
-                                        <img src="styles/images/menu_icon_nem.png" style="width: 50px; height: 30px" />
+                                        <img src="styles/images/menu/menu_icon_nem.png" style="width: 50px; height: 30px" />
                                         <p style="text-align: center">Nệm</p>
                                     </a>
                                         <div class="submenu" >
@@ -70,7 +70,7 @@
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
-                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                <img style="height:200px;width: 200px;" src="styles/images/other/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
                                                 </p>
                                             </div>
                                         </div>
@@ -78,7 +78,7 @@
                                 </li>
                                 <li class="item level-top">
                                     <a href="changagoi.aspx">
-                                        <img src="styles/images/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
+                                        <img src="styles/images/menu/menu_icon_chan_ga.png" style="width: 50px; height: 30px" />
                                         <p style="text-align: center">Chăn Ga Gối</p>
                                     </a>
                                         <div class="submenu" >
@@ -92,7 +92,7 @@
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
-                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                <img style="height:200px;width: 200px;" src="styles/images/other/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
                                                 </p>
                                             </div>
                                         </div>
@@ -100,7 +100,7 @@
                                 </li>
                                 <li class="item level-top">
                                     <a href="phukien.aspx">
-                                        <img src="styles/images/menu_icon_phukien.png" style="width: 50px; height: 30px" />
+                                        <img src="styles/images/menu/menu_icon_phukien.png" style="width: 50px; height: 30px" />
                                         <p style="text-align: center">Phụ kiện</p>
                                     </a>
                                         <div class="submenu">
@@ -114,7 +114,7 @@
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
-                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                <img style="height:200px;width: 200px;" src="styles/images/other/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
                                                 </p>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@
                                 </li>
                                 <li class="item level-top">
                                     <a href="giuong.aspx">
-                                        <img src="styles/images/menu_icon_giuong.png" style="width: 50px; height: 30px" />
+                                        <img src="styles/images/menu/menu_icon_giuong.png" style="width: 50px; height: 30px" />
                                         <p style="text-align: center">Giường</p>
                                     </a>
                                         <div class="submenu" >
@@ -136,7 +136,7 @@
                                             </ul>
                                             <div class="submenulists">
                                                 <p>
-                                                <img style="height:200px;width: 200px;" src="styles/images/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
+                                                <img style="height:200px;width: 200px;" src="styles/images/other/medallion-deluxe-comforter-set-with-sheet-pillowcase-mattress-pad-pillow-grey-bedding-teal-and.jpg" />
                                                 </p>
                                             </div>
                                         </div>
@@ -144,7 +144,7 @@
                                 </li>
                                 <li class="item level-top">
                                     <a href="vesinhnem.aspx">
-                                        <img src="styles/images/menu_icon_vesinhnem.png" style="width: 50px; height: 30px" />
+                                        <img src="styles/images/menu/menu_icon_vesinhnem.png" style="width: 50px; height: 30px" />
                                         <p style="text-align: center">Vệ sinh nệm</p>
                                     </a>
                                 </li>
@@ -188,7 +188,7 @@
                 <div class="bottom-footer-item report">
                     <div class="img">
                         <a>
-                            <img src="styles/images/vuanem-logo.png" style="width: 120px;" alt="vuanem-logo" />
+                            <img src="styles/images/logo/vuanem-logo.png" style="width: 120px;" alt="vuanem-logo" />
                         </a>
                         <p>
                             Gọi mua hàng (8h30 - 21:00)
