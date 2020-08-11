@@ -12,7 +12,7 @@
  Target Server Version : 14003048
  File Encoding         : 65001
 
- Date: 11/08/2020 16:25:13
+ Date: 11/08/2020 17:21:45
 */
 
 -- ----------------------------
@@ -93,9 +93,9 @@ GO
 
 CREATE TABLE [dbo].[KHACHHANG] (
   [USERNAME] char(50) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
-  [HOTEN] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [HOTEN] nvarchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
   [EMAIL] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
-  [MATKHAU] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [MATKHAU] nvarchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
   [SDT] varchar(11) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL
 )
 GO
